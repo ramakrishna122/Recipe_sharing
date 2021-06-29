@@ -1,0 +1,29 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Recipe</h1>
+			</div></br></br></br>
+			<h2 class="word">
+				<form action="{{ url_for('recipe') }}" method="post">
+				<input id="recipename" name="recipename" type="text" placeholder="Enter Your Recipe name" class="textbox"/></br>
+                <input id="recipedescription" name="recipedescription" type="text" placeholder="Enter Recipe Description" class="textbox"/></br>
+                <input id="recipeingredients" name="recipeingredients" type="text" placeholder="Enter Recipe Ingredients" class="textbox"/></br>
+                <input id="number_of_calories" name="number_of_calories" type="text" placeholder="Enter number of calories" class="textbox"/></br>
+                <input id="fat_content" name="fat_content" type="text" placeholder="Enter Fat Content" class="textbox"/></br>
+                <input id="protein" name="protein" type="text" placeholder="Enter Protein" class="textbox"/></br>
+                <input type="submit" class="btn" value="submit"></br>
+				</form>
+			</h2 >
+					</div>
+		</div>
+	</body>
+</html>

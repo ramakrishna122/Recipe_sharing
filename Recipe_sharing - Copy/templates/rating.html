@@ -1,0 +1,25 @@
+<!-- Store this code in 'register.html' file inside the 'templates' folder -->
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register </title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">			
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Rate it</h1>
+			</div></br></br></br>
+			<h2 class="word">
+				<form action="{{ url_for('rating') }}" method="post">
+				<div class="msg">{{ msg }}</div>
+                <input id="rating" name="rating" type="text" placeholder="Enter Rating for 5" class="textbox"/></br></br>
+                <input type="submit" class="btn" value="Submit"></br>
+				</form>
+			</h2>
+			</div>
+		</div>
+	</body>
+</html>

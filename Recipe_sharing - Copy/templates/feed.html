@@ -1,0 +1,35 @@
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <head>
+
+    </head>
+    <body>
+        <table class="table table-striped table-bordered">
+            <thead id ="thead">
+              <tr>
+                <th scope="col">Recipe Id</th>
+                <th scope="col">Recipe Name</th>
+                <th scope="col">Recipe Description</th>
+                <th scope="col">Recipe Ingredients</th>
+                <th scope="col">Recipe Rating</th>
+                
+              </tr>
+            </thead>
+            
+            <tbody>
+              {% for item in msg %}
+                  <tr>
+                      <td>{{ item["Recipe_id"]}}&nbsp&nbsp</td>
+                      <td>{{ item["Recipe_Name"]}}&nbsp&nbsp</td>
+                      <td>{{ item["Recipe_description"]}}&nbsp&nbsp</td>
+                      <td>{{ item["Recipe_Ingredients"]}}&nbsp&nbsp</td>
+                      <td><p class="bottom"> <a class="bottom" href="{{url_for('rate')}}"> Rate it</a></p>
+                      </td>
+                      
+          
+                  </tr>
+              {% endfor %} 
+            </tbody>
+          </table>
+    </body>
+</html>
